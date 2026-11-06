@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ============================================================
+       METAS PRINCIPALES
+       ============================================================ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KOMA — Archivo de paneles icónicos del manga</title>
+  <meta name="description" content="KOMA es un archivo visual de paneles icónicos del manga: doce viñetas que detuvieron el tiempo, analizadas desde la composición, la tinta y el silencio.">
+  <meta name="keywords" content="manga, paneles, viñetas, archivo visual, cultura japonesa, diseño editorial, flexbox, KOMA">
+  <meta name="author" content="KOMA Studio">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#08080a">
+  <meta name="color-scheme" content="dark">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="canonical" href="https://koma.example/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KOMA">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="KOMA — Archivo de paneles icónicos del manga">
+  <meta property="og:description" content="Doce viñetas que detuvieron el tiempo. Un archivo visual sobre composición, tinta y silencio.">
+  <meta property="og:url" content="https://koma.example/">
+  <meta property="og:image" content="https://koma.example/assets/img/og-cover.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Portada de KOMA con el lema El instante que lo cambió todo y una ilustración de One Piece">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KOMA — Archivo de paneles icónicos del manga">
+  <meta name="twitter:description" content="Doce viñetas que detuvieron el tiempo. Un archivo visual sobre composición, tinta y silencio.">
+  <meta name="twitter:image" content="https://koma.example/assets/img/og-cover.png">
+
+  <!-- Iconos y tipografías (CDN) -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Estilos propios: reset + diseño -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Datos estructurados -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "KOMA",
+    "alternateName": "KOMA — Archivo visual del manga",
+    "url": "https://koma.example/",
+    "description": "Archivo visual de paneles icónicos del manga: composición, tinta y silencio.",
+    "inLanguage": "es",
+    "publisher": {
+      "@type": "Organization",
+      "name": "KOMA Studio"
+    }
+  }
+  </script>
+</head>
+
+<body id="top">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ============================================================
+       HEADER + NAV
+       ============================================================ -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="#top" aria-label="KOMA, volver al inicio">
+        <span class="brand__mark" aria-hidden="true">K</span>
+        <span class="brand__text">
+          <span class="brand__name">KOMA</span>
+          <span class="brand__tag">Archivo visual</span>
+        </span>
+      </a>
+
+      <!-- Menú móvil: checkbox + label, sin dependencias -->
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Abrir menú de navegación">
+      <label class="nav-burger" for="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Menú</span>
+      </label>
+
+      <nav class="nav" id="menu-principal" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#archivo">
+              Archivo
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="nav__dropdown">
+              <span class="nav__dropdown-label">Por género</span>
+              <a href="#archivo">Shonen <small>Ritmo y acción</small></a>
+              <a href="#archivo">Seinen <small>Silencio y sombra</small></a>
+              <a href="#archivo">Deportes <small>El instante atlético</small></a>
+              <a href="#archivo">Ciencia ficción <small>Futuro y ruido</small></a>
+              <a href="#archivo">Sobrenatural <small>Mitos y sombras</small></a>
+            </div>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#historia">
+              Maestros
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="nav__dropdown">
+              <span class="nav__dropdown-label">Detrás de la tinta</span>
+              <a href="#historia">Autores <small>Quién dibuja el gesto</small></a>
+              <a href="#historia">Entrevistas <small>Conversaciones de estudio</small></a>
+              <a href="#historia">Influencias <small>De Tezuka a hoy</small></a>
+              <a href="#historia">Biblioteca <small>Libros y referencias</small></a>
+            </div>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#manifiesto">
+              Guías
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="nav__dropdown">
+              <span class="nav__dropdown-label">Aprender a mirar</span>
+              <a href="#manifiesto">Cómo leer un panel <small>Del ojo al significado</small></a>
+              <a href="#manifiesto">Composición <small>Peso, línea y vacío</small></a>
+              <a href="#manifiesto">Ritmo y gutter <small>El tiempo entre viñetas</small></a>
+              <a href="#manifiesto">Glosario <small>Palabras del oficio</small></a>
+            </div>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#manifiesto">Nosotros</a>
+          </li>
+        </ul>
+
+        <div class="nav__actions">
+          <a class="icon-btn" href="#archivo" aria-label="Buscar en el archivo">
+            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          </a>
+          <a class="btn btn--primary btn--sm" href="#suscripcion">Suscribirme</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- ==========================================================
+         HERO
+         ========================================================== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container container--wide">
+        <div class="hero__meta">
+          <span>Archivo visual — Vol. 001</span>
+          <span>Tokio / Madrid — 2026</span>
+        </div>
+
+        <div class="hero__grid">
+          <div class="hero__content">
+            <p class="eyebrow">Paneles que detuvieron el tiempo</p>
+            <h1 class="hero__title" id="hero-title">El <em>instante</em> que lo cambió todo.</h1>
+            <p class="hero__lead">
+              Una colección curada de viñetas que redefinieron el lenguaje del manga.
+              <strong>Tinta, silencio y velocidad:</strong> el fotograma que nunca se mueve
+              y aun así lo dice todo.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#archivo">
+                Explorar el archivo
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+              <a class="btn btn--ghost" href="#manifiesto">Cómo curamos</a>
+            </div>
+            <div class="hero__facts">
+              <div class="hero__fact"><b>12</b><span>Paneles</span></div>
+              <div class="hero__fact"><b>09</b><span>Series</span></div>
+              <div class="hero__fact"><b>58</b><span>Años de tinta</span></div>
+              <div class="hero__fact"><b>01</b><span>Panel / domingo</span></div>
+            </div>
+          </div>
+
+          <div class="hero__visual">
+            <figure class="frame frame--back">
+              <img src="assets/img/panels/bunny.jpg"
+                   alt="Bunny Iglesias, personaje de Blue Lock."
+                   width="1200" height="1198" fetchpriority="high" decoding="async">
+              <figcaption>Fig. 02 — Bunny</figcaption>
+            </figure>
+
+            <figure class="frame frame--front">
+              <img src="assets/img/panels/hisoka.jpg"
+                   alt="Hisoka Morow, personaje de Hunter × Hunter."
+                   width="640" height="554" fetchpriority="high" decoding="async">
+              <figcaption>Fig. 01 — Hisoka</figcaption>
+            </figure>
+
+            <div class="sticker" aria-hidden="true">
+              <span class="sticker__big">KOMA</span>
+              <span class="sticker__small">週刊 · 2026</span>
+            </div>
+
+            <span class="hero__vertical" aria-hidden="true">漫画</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         CINTA TIPOGRÁFICA
+         ========================================================== -->
+    <div class="ticker">
+      <div class="ticker__track">
+        <div class="ticker__group">
+          <span class="ticker__item">Hunter × Hunter</span>
+          <i class="fa-solid fa-star ticker__star" aria-hidden="true"></i>
+          <span class="ticker__item">Attack on Titan</span>
+          <i class="fa-solid fa-star ticker__star" aria-hidden="true"></i>
+          <span class="ticker__item">Hajime no Ippo</span>
+          <i class="fa-solid fa-star ticker__star" aria-hidden="true"></i>
+          <span class="ticker__item">Kuroko no Basket</span>
+          <i class="fa-solid fa-star ticker__star" aria-hidden="true"></i>
+          <span class="ticker__item">Blue Lock</span>
+          <i class="fa-solid fa-star ticker__star" aria-hidden="true"></i>
+          <span class="ticker__item">One Piece</span>
+          <i class="fa-solid fa-star ticker__star" aria-hidden="true"></i>
+          <span class="ticker__item">Record of Ragnarok</span>
+          <i class="fa-solid fa-star ticker__star" aria-hidden="true"></i>
+          <span class="ticker__item">Tougen Anki</span>
+          <i class="fa-solid fa-star ticker__star" aria-hidden="true"></i>
+          <span class="ticker__item">Kokou no Hito</span>
+        </div>
+
+        <div class="ticker__group" aria-hidden="true">
+          <span class="ticker__item">Hunter × Hunter</span>
+          <i class="fa-solid fa-star ticker__star"></i>
+          <span class="ticker__item">Attack on Titan</span>
+          <i class="fa-solid fa-star ticker__star"></i>
+          <span class="ticker__item">Hajime no Ippo</span>
+          <i class="fa-solid fa-star ticker__star"></i>
+          <span class="ticker__item">Kuroko no Basket</span>
+          <i class="fa-solid fa-star ticker__star"></i>
+          <span class="ticker__item">Blue Lock</span>
+          <i class="fa-solid fa-star ticker__star"></i>
+          <span class="ticker__item">One Piece</span>
+          <i class="fa-solid fa-star ticker__star"></i>
+          <span class="ticker__item">Record of Ragnarok</span>
+          <i class="fa-solid fa-star ticker__star"></i>
+          <span class="ticker__item">Tougen Anki</span>
+          <i class="fa-solid fa-star ticker__star"></i>
+          <span class="ticker__item">Kokou no Hito</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================
+         CIFRAS
+         ========================================================== -->
+    <section class="stats" aria-label="Cifras del archivo">
+      <div class="container">
+        <div class="stats__list">
+          <div class="stats__item">
+            <span class="stats__num">1968</span>
+            <span class="stats__label">Primer panel del archivo</span>
+          </div>
+          <div class="stats__item">
+            <span class="stats__num">12</span>
+            <span class="stats__label">Paneles curados</span>
+          </div>
+          <div class="stats__item">
+            <span class="stats__num">09</span>
+            <span class="stats__label">Series representadas</span>
+          </div>
+          <div class="stats__item">
+            <span class="stats__num">01</span>
+            <span class="stats__label">Panel cada domingo</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         PANEL DE LA SEMANA + ASIDE
+         ========================================================== -->
+    <section class="section section--paper" id="panel-semana" aria-labelledby="featured-title">
+      <div class="container container--wide">
+        <div class="feature-layout">
+          <div class="feature-main">
+            <div class="feature__grid">
+              <figure class="feature__figure">
+                <span class="feature__badge" aria-hidden="true">01</span>
+                <img src="assets/img/panels/law-corazon.jpg"
+                     alt="Trafalgar Law y Corazón, personajes de One Piece."
+                     width="468" height="655" loading="lazy" decoding="async">
+                <figcaption class="feature__caption">One Piece · Eiichiro Oda</figcaption>
+              </figure>
+
+              <div class="feature__body">
+                <p class="section__kicker">Panel de la semana</p>
+                <span class="tag">
+                  <i class="fa-solid fa-fire" aria-hidden="true"></i>
+                  Shonen · Drama
+                </span>
+                <h2 class="feature__title" id="featured-title">La sonrisa que <em>nunca cesa.</em></h2>
+                <p class="feature__text">
+                  Hay personajes que se despiden sonriendo para que el otro pueda seguir.
+                  Corazón convierte su despedida en una lección de silencio: el mundo se apaga
+                  y la sonrisa se queda.
+                </p>
+                <p class="feature__text">
+                  Lo que hace icónico a este panel no es el dibujo: es la <strong>pausa</strong>.
+                  La silueta de Law y esa sonrisa que parece decir todo lo que el diálogo
+                  no puede.
+                </p>
+
+                <blockquote class="feature__quote">
+                  «Hay sonrisas que se heredan como una promesa.»
+                </blockquote>
+
+                <dl class="ficha">
+                  <div class="ficha__item">
+                    <dt>Obra homenajeada</dt>
+                    <dd>One Piece (1997–)</dd>
+                  </div>
+                  <div class="ficha__item">
+                    <dt>Autor</dt>
+                    <dd>Eiichiro Oda</dd>
+                  </div>
+                  <div class="ficha__item">
+                    <dt>Técnica</dt>
+                    <dd>Tinta, tramas y color</dd>
+                  </div>
+                  <div class="ficha__item">
+                    <dt>Lectura</dt>
+                    <dd>6 minutos</dd>
+                  </div>
+                </dl>
+
+                <a class="link-arrow" href="#archivo">
+                  Leer el análisis
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+
+                <p class="feature__note">
+                  <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                  Imagen de la obra original. Uso educativo, sin fines comerciales.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <aside class="sidebar" aria-label="Contenido complementario">
+            <section class="sidebar__block" aria-labelledby="top5-title">
+              <h3 class="sidebar__title" id="top5-title">
+                Top 5
+                <i class="fa-solid fa-fire" aria-hidden="true"></i>
+              </h3>
+              <ol>
+                <li>
+                  <a class="rank" href="#archivo">
+                    <span class="rank__num">01</span>
+                    <span>
+                      <span class="rank__title">La montaña interior</span>
+                      <span class="rank__meta">Seinen · Soledad</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="rank" href="#archivo">
+                    <span class="rank__num">02</span>
+                    <span>
+                      <span class="rank__title">La sonrisa de Corazón</span>
+                      <span class="rank__meta">Drama · Memoria</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="rank" href="#archivo">
+                    <span class="rank__num">03</span>
+                    <span>
+                      <span class="rank__title">El contragolpe del siglo</span>
+                      <span class="rank__meta">Deportes · Ritmo</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="rank" href="#archivo">
+                    <span class="rank__num">04</span>
+                    <span>
+                      <span class="rank__title">El genio dormido</span>
+                      <span class="rank__meta">Deportes · Talento</span>
+                    </span>
+                  </a>
+                </li>
+                <li>
+                  <a class="rank" href="#archivo">
+                    <span class="rank__num">05</span>
+                    <span>
+                      <span class="rank__title">La ciencia contra los dioses</span>
+                      <span class="rank__meta">Ciencia ficción</span>
+                    </span>
+                  </a>
+                </li>
+              </ol>
+            </section>
+
+            <section class="sidebar__block" aria-labelledby="glosario-title">
+              <h3 class="sidebar__title" id="glosario-title">
+                Glosario
+                <i class="fa-solid fa-book-open" aria-hidden="true"></i>
+              </h3>
+              <dl class="glossary">
+                <dt>Tramado</dt>
+                <dd>Trama de puntos que crea grises sin imprimir grises.</dd>
+                <dt>Gutter</dt>
+                <dd>El espacio entre viñetas: donde ocurre el tiempo.</dd>
+                <dt>Línea de velocidad</dt>
+                <dd>El trazo que convierte la quietud en movimiento.</dd>
+              </dl>
+            </section>
+
+            <section class="sidebar__block">
+              <p class="sidebar__note">
+                <b>Radar.</b> Cada domingo abrimos una viñeta nueva y contamos
+                por qué funciona. Sin ruido, sin spoilers.
+              </p>
+              <a href="#suscripcion">
+                Recibir el panel
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         ARCHIVO
+         ========================================================== -->
+    <section class="section archive" id="archivo" aria-labelledby="archivo-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="section__kicker">Colección permanente</p>
+            <h2 class="section__title" id="archivo-title">El <em>archivo</em></h2>
+          </div>
+          <p class="section__desc">
+            Nueve viñetas, nueve formas de detener el tiempo. Filtra por género
+            o recorre la colección completa: cada pieza se lee en menos de lo
+            que tarda en pasar un tren.
+          </p>
+        </div>
+
+        <div class="archive__toolbar">
+          <!-- Filtros CSS puros: radio + :has() -->
+          <div class="chips archive__filters" role="group" aria-label="Filtrar paneles por género">
+            <input type="radio" name="filtro" id="f-todos" checked>
+            <label class="chip" for="f-todos">Todos <small>09</small></label>
+
+            <input type="radio" name="filtro" id="f-shonen">
+            <label class="chip" for="f-shonen">Shonen <small>01</small></label>
+
+            <input type="radio" name="filtro" id="f-seinen">
+            <label class="chip" for="f-seinen">Seinen <small>02</small></label>
+
+            <input type="radio" name="filtro" id="f-deportes">
+            <label class="chip" for="f-deportes">Deportes <small>04</small></label>
+
+            <input type="radio" name="filtro" id="f-ciencia">
+            <label class="chip" for="f-ciencia">Ciencia ficción <small>01</small></label>
+
+            <input type="radio" name="filtro" id="f-sobrenatural">
+            <label class="chip" for="f-sobrenatural">Sobrenatural <small>01</small></label>
+          </div>
+
+          <p class="archive__count" aria-live="polite">
+            <span class="count-todos">09 piezas</span>
+            <span class="count-shonen">01 pieza</span>
+            <span class="count-seinen">02 piezas</span>
+            <span class="count-deportes">04 piezas</span>
+            <span class="count-ciencia">01 pieza</span>
+            <span class="count-sobrenatural">01 pieza</span>
+          </p>
+        </div>
+
+        <div class="archive__grid">
+          <!-- Artículo 01 -->
+          <article class="card" data-cat="seinen">
+            <a class="card__media" href="#" aria-label="Leer «El soldado más fuerte»">
+              <img src="assets/img/panels/levi.jpg"
+                   alt="Levi Ackerman, personaje de Attack on Titan."
+                   width="1200" height="960" loading="lazy" decoding="async">
+              <span class="card__overlay" aria-hidden="true"></span>
+              <span class="card__cat">Seinen</span>
+              <span class="card__open" aria-hidden="true">
+                <i class="fa-solid fa-arrow-up-right"></i>
+              </span>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title"><a href="#">El soldado más fuerte</a></h3>
+              <p class="card__excerpt">
+                Un corte de pelo, una mirada y la certeza de que la humanidad aún puede morder. Levi no grita: decide.
+              </p>
+              <div class="card__foot">
+                <span>Attack on Titan · 2009</span>
+                <span>5 min</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artículo 02 -->
+          <article class="card" data-cat="deportes">
+            <a class="card__media" href="#" aria-label="Leer «El contragolpe del siglo»">
+              <img src="assets/img/panels/ippo.jpg"
+                   alt="Ippo Makunouchi, personaje de Hajime no Ippo."
+                   width="736" height="531" loading="lazy" decoding="async">
+              <span class="card__overlay" aria-hidden="true"></span>
+              <span class="card__cat">Deportes</span>
+              <span class="card__open" aria-hidden="true">
+                <i class="fa-solid fa-arrow-up-right"></i>
+              </span>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title"><a href="#">El contragolpe del siglo</a></h3>
+              <p class="card__excerpt">
+                El ring desaparece y solo queda el ángulo del puño. El deporte se convierte en física emocional.
+              </p>
+              <div class="card__foot">
+                <span>Hajime no Ippo · 1989</span>
+                <span>4 min</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artículo 03 -->
+          <article class="card" data-cat="deportes">
+            <a class="card__media" href="#" aria-label="Leer «El gigante que odiaba perder»">
+              <img src="assets/img/panels/murasakibara.jpg"
+                   alt="Atsushi Murasakibara, personaje de Kuroko no Basket."
+                   width="557" height="576" loading="lazy" decoding="async">
+              <span class="card__overlay" aria-hidden="true"></span>
+              <span class="card__cat">Deportes</span>
+              <span class="card__open" aria-hidden="true">
+                <i class="fa-solid fa-arrow-up-right"></i>
+              </span>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title"><a href="#">El gigante que odiaba perder</a></h3>
+              <p class="card__excerpt">
+                Tres metros de indiferencia y, de pronto, el aro entero desaparece bajo su mano. La escala como sentencia.
+              </p>
+              <div class="card__foot">
+                <span>Kuroko no Basket · 2008</span>
+                <span>4 min</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artículo 04 -->
+          <article class="card" data-cat="deportes">
+            <a class="card__media" href="#" aria-label="Leer «El genio que juega dormido»">
+              <img src="assets/img/panels/nagi.jpg"
+                   alt="Nagi Seishiro, personaje de Blue Lock."
+                   width="600" height="600" loading="lazy" decoding="async">
+              <span class="card__overlay" aria-hidden="true"></span>
+              <span class="card__cat">Deportes</span>
+              <span class="card__open" aria-hidden="true">
+                <i class="fa-solid fa-arrow-up-right"></i>
+              </span>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title"><a href="#">El genio que juega dormido</a></h3>
+              <p class="card__excerpt">
+                Nagi no corre: espera a que el balón entienda su geometría. El talento como forma de pereza.
+              </p>
+              <div class="card__foot">
+                <span>Blue Lock · 2018</span>
+                <span>3 min</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artículo 05 -->
+          <article class="card" data-cat="deportes">
+            <a class="card__media" href="#" aria-label="Leer «El instinto en el área»">
+              <img src="assets/img/panels/shidou.jpg"
+                   alt="Ryusei Shidou, personaje de Blue Lock."
+                   width="1000" height="562" loading="lazy" decoding="async">
+              <span class="card__overlay" aria-hidden="true"></span>
+              <span class="card__cat">Deportes</span>
+              <span class="card__open" aria-hidden="true">
+                <i class="fa-solid fa-arrow-up-right"></i>
+              </span>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title"><a href="#">El instinto en el área</a></h3>
+              <p class="card__excerpt">
+                No hay plan, solo impulso. Shidou convierte el área en un laboratorio de riesgos imposibles.
+              </p>
+              <div class="card__foot">
+                <span>Blue Lock · 2018</span>
+                <span>3 min</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artículo 06 -->
+          <article class="card" data-cat="shonen">
+            <a class="card__media" href="#" aria-label="Leer «El padre de la humanidad»">
+              <img src="assets/img/panels/adan.jpg"
+                   alt="Adán, personaje de Record of Ragnarok."
+                   width="736" height="736" loading="lazy" decoding="async">
+              <span class="card__overlay" aria-hidden="true"></span>
+              <span class="card__cat">Shonen</span>
+              <span class="card__open" aria-hidden="true">
+                <i class="fa-solid fa-arrow-up-right"></i>
+              </span>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title"><a href="#">El padre de la humanidad</a></h3>
+              <p class="card__excerpt">
+                El primer hombre contra un dios. La sonrisa de Adán no es arrogancia: es memoria de todo lo que vino después.
+              </p>
+              <div class="card__foot">
+                <span>Record of Ragnarok · 2017</span>
+                <span>6 min</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artículo 07 -->
+          <article class="card" data-cat="ciencia">
+            <a class="card__media" href="#" aria-label="Leer «La ciencia contra los dioses»">
+              <img src="assets/img/panels/tesla.jpg"
+                   alt="Nikola Tesla, personaje de Record of Ragnarok."
+                   width="400" height="400" loading="lazy" decoding="async">
+              <span class="card__overlay" aria-hidden="true"></span>
+              <span class="card__cat">Ciencia ficción</span>
+              <span class="card__open" aria-hidden="true">
+                <i class="fa-solid fa-arrow-up-right"></i>
+              </span>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title"><a href="#">La ciencia contra los dioses</a></h3>
+              <p class="card__excerpt">
+                Un inventor frente a la divinidad. La electricidad como lenguaje y el futuro como último argumento.
+              </p>
+              <div class="card__foot">
+                <span>Record of Ragnarok · 2017</span>
+                <span>5 min</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artículo 08 -->
+          <article class="card" data-cat="sobrenatural">
+            <a class="card__media" href="#" aria-label="Leer «El maestro oni»">
+              <img src="assets/img/panels/mudano.jpg"
+                   alt="Naito Mudano, personaje de Tougen Anki."
+                   width="736" height="736" loading="lazy" decoding="async">
+              <span class="card__overlay" aria-hidden="true"></span>
+              <span class="card__cat">Sobrenatural</span>
+              <span class="card__open" aria-hidden="true">
+                <i class="fa-solid fa-arrow-up-right"></i>
+              </span>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title"><a href="#">El maestro oni</a></h3>
+              <p class="card__excerpt">
+                Sonríe como quien ya conoce el final. Mudano enseña que el poder también se hereda en la mirada.
+              </p>
+              <div class="card__foot">
+                <span>Tougen Anki · 2020</span>
+                <span>4 min</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artículo 09 -->
+          <article class="card" data-cat="seinen">
+            <a class="card__media" href="#" aria-label="Leer «La montaña interior»">
+              <img src="assets/img/panels/mori.jpg"
+                   alt="Mori Buntarou, protagonista de Kokou no Hito (The Climber)."
+                   width="639" height="803" loading="lazy" decoding="async">
+              <span class="card__overlay" aria-hidden="true"></span>
+              <span class="card__cat">Seinen</span>
+              <span class="card__open" aria-hidden="true">
+                <i class="fa-solid fa-arrow-up-right"></i>
+              </span>
+            </a>
+            <div class="card__body">
+              <h3 class="card__title"><a href="#">La montaña interior</a></h3>
+              <p class="card__excerpt">
+                Mori no escala para llegar a la cima: escala para desaparecer. La soledad como única vía y la roca como espejo.
+              </p>
+              <div class="card__foot">
+                <span>Kokou no Hito (The Climber) · 2007</span>
+                <span>6 min</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         LÍNEA DE TIEMPO
+         ========================================================== -->
+    <section class="section section--tight" id="historia" aria-labelledby="historia-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="section__kicker">Línea de tinta</p>
+            <h2 class="section__title" id="historia-title">Seis décadas <em>de tinta.</em></h2>
+          </div>
+          <p class="section__desc">
+            Un recorrido breve por los momentos que cambiaron la forma de
+            dibujar el tiempo. No es una historia completa: es un mapa de
+            influencias.
+          </p>
+        </div>
+
+        <ol class="timeline">
+          <li class="timeline__item">
+            <p class="timeline__year">1968<span>.</span></p>
+            <h3 class="timeline__title">El dios del manga</h3>
+            <p class="timeline__text">Tezuka y la viñeta cinematográfica: el encuadre aprende a moverse.</p>
+          </li>
+          <li class="timeline__item">
+            <p class="timeline__year">1989<span>.</span></p>
+            <h3 class="timeline__title">El ring</h3>
+            <p class="timeline__text">Hajime no Ippo convierte el deporte en combate psicológico y el sudor en tinta.</p>
+          </li>
+          <li class="timeline__item">
+            <p class="timeline__year">1997<span>.</span></p>
+            <h3 class="timeline__title">La gran aventura</h3>
+            <p class="timeline__text">One Piece demuestra que el viaje puede ser la estructura y la amistad el motor.</p>
+          </li>
+          <li class="timeline__item">
+            <p class="timeline__year">2009<span>.</span></p>
+            <h3 class="timeline__title">Los muros</h3>
+            <p class="timeline__text">Attack on Titan convierte la escala en amenaza y el silencio en terror.</p>
+          </li>
+          <li class="timeline__item">
+            <p class="timeline__year">2018<span>.</span></p>
+            <h3 class="timeline__title">El proyecto</h3>
+            <p class="timeline__text">Blue Lock transforma el ego en motor narrativo: el talento también se grita.</p>
+          </li>
+          <li class="timeline__item">
+            <p class="timeline__year">2026<span>.</span></p>
+            <h3 class="timeline__title">Archivo vivo</h3>
+            <p class="timeline__text">Nuevas voces reinterpretan el lenguaje: menos tinta, más intención.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         MANIFIESTO
+         ========================================================== -->
+    <section class="section" id="manifiesto" aria-labelledby="manifiesto-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <p class="section__kicker">Cómo curamos</p>
+            <h2 class="section__title" id="manifiesto-title">Tres reglas, <em>una obsesión.</em></h2>
+          </div>
+          <p class="section__desc">
+            No elegimos los paneles más famosos. Elegimos los que siguen
+            funcionando cuando los sacas de su página y los miras solo.
+          </p>
+        </div>
+
+        <div class="principles">
+          <article class="principle">
+            <span class="principle__num" aria-hidden="true">01</span>
+            <h3 class="principle__title">Leemos en voz baja</h3>
+            <p class="principle__text">
+              Revisamos la obra completa, no solo la viñeta. El contexto es
+              parte del encuadre: sin él, el gesto se queda en dibujo.
+            </p>
+          </article>
+
+          <article class="principle">
+            <span class="principle__num" aria-hidden="true">02</span>
+            <h3 class="principle__title">Aislamos el gesto</h3>
+            <p class="principle__text">
+              Buscamos el panel que puede explicarse sin diálogo. Si funciona
+              solo, entra. Si necesita una novela al lado, no es un panel: es una página.
+            </p>
+          </article>
+
+          <article class="principle">
+            <span class="principle__num" aria-hidden="true">03</span>
+            <h3 class="principle__title">Escribimos desde el respeto</h3>
+            <p class="principle__text">
+              Analizamos composición, tinta y ritmo. Citamos la obra, el autor
+              y el contexto. Las imágenes se usan con fines educativos y
+              pertenecen a sus creadores.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================
+         NEWSLETTER
+         ========================================================== -->
+    <section class="newsletter" id="suscripcion" aria-labelledby="newsletter-title">
+      <div class="container newsletter__inner">
+        <div class="newsletter__copy">
+          <p class="newsletter__eyebrow">El panel del domingo</p>
+          <h2 class="newsletter__title" id="newsletter-title">Un panel cada <em>domingo.</em></h2>
+          <p class="newsletter__text">
+            Sin ruido. Sin spoilers. Solo una viñeta y tres párrafos sobre por
+            qué funciona. Lectura de café, no de scroll infinito.
+          </p>
+        </div>
+
+        <div class="newsletter__form">
+          <form class="form" action="#" method="post">
+            <label class="sr-only" for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" placeholder="tu@correo.com" autocomplete="email" required>
+            <button type="submit">
+              Suscribirme
+              <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </form>
+          <p class="form__note">
+            <i class="fa-solid fa-lock" aria-hidden="true"></i>
+            Sin spam. Cancela cuando quieras.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer" id="contacto">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="#top" aria-label="KOMA, volver al inicio">
+            <span class="brand__mark" aria-hidden="true">K</span>
+            <span class="brand__text">
+              <span class="brand__name">KOMA</span>
+              <span class="brand__tag">Archivo visual</span>
+            </span>
+          </a>
+          <p class="footer__desc">
+            Archivo independiente de cultura manga. Curado a mano, escrito
+            con tinta y construido con flexbox. Las imágenes pertenecen a sus
+            autores y se usan con fines educativos, sin ánimo de lucro.
+          </p>
+          <span class="footer__badge">
+            <i class="fa-solid fa-pen-nib" aria-hidden="true"></i>
+            Curado a mano desde 2024
+          </span>
+        </div>
+
+        <nav class="footer__col" aria-label="Explorar">
+          <h3 class="footer__title">Explorar</h3>
+          <div class="footer__links">
+            <a class="footer__link" href="#archivo">Archivo</a>
+            <a class="footer__link" href="#panel-semana">Panel de la semana</a>
+            <a class="footer__link" href="#historia">Historia</a>
+            <a class="footer__link" href="#manifiesto">Manifiesto</a>
+          </div>
+        </nav>
+
+        <nav class="footer__col" aria-label="Recursos">
+          <h3 class="footer__title">Recursos</h3>
+          <div class="footer__links">
+            <a class="footer__link" href="#manifiesto">Glosario</a>
+            <a class="footer__link" href="#manifiesto">Guías</a>
+            <a class="footer__link" href="#suscripcion">Newsletter</a>
+            <a class="footer__link" href="#contacto">Contacto</a>
+          </div>
+        </nav>
+
+        <div class="footer__col">
+          <h3 class="footer__title">Síguenos</h3>
+          <div class="footer__socials">
+            <a class="footer__social" href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="KOMA en X">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+            <a class="footer__social" href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="KOMA en Instagram">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a class="footer__social" href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="KOMA en YouTube">
+              <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+            </a>
+            <a class="footer__social" href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="KOMA en Pinterest">
+              <i class="fa-brands fa-pinterest-p" aria-hidden="true"></i>
+            </a>
+            <a class="footer__social" href="https://discord.com" target="_blank" rel="noopener noreferrer" aria-label="Comunidad de KOMA en Discord">
+              <i class="fa-brands fa-discord" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <p class="footer__wordmark" aria-hidden="true">KOMA</p>
+
+      <div class="footer__bottom">
+        <p>© 2026 KOMA. Todos los derechos reservados.</p>
+        <p class="footer__credit">
+          Imágenes © sus autores · <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Uso educativo.
+        </p>
+        <nav class="footer__legal" aria-label="Legal">
+          <a href="#">Aviso legal</a>
+          <a href="#">Privacidad</a>
+          <a href="#">Cookies</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Elemento fijo en la esquina inferior derecha -->
+  <a class="to-top" href="#top" aria-label="Volver arriba">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    <span>TOP</span>
+  </a>
+
+  <!-- Mejora progresiva: cierra el menú móvil al navegar o con Escape.
+       El menú funciona al 100% solo con CSS. -->
+  <script>
+    (function () {
+      var toggle = document.getElementById("nav-toggle");
+      if (!toggle) return;
+
+      document.querySelectorAll("#menu-principal a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          toggle.checked = false;
+        });
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && toggle.checked) {
+          toggle.checked = false;
+          toggle.focus();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

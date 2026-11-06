@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" width="900" height="1200" role="img" aria-labelledby="p7t p7d">
+  <title id="p7t">El tazon, recreacion de un panel de manga</title>
+  <desc id="p7d">Un tazon humeante de ramen visto desde arriba, con huevo, alga nori y palillos, sobre fondo de papel.</desc>
+  <defs>
+    <pattern id="p7ht" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(24)">
+      <circle cx="2" cy="2" r="1.6" fill="#0A0A0C"/>
+    </pattern>
+    <pattern id="p7htw" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(-18)">
+      <circle cx="2" cy="2" r="1.3" fill="#F2ECE1"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="1200" fill="#F2ECE1"/>
+  <circle cx="450" cy="620" r="400" fill="url(#p7ht)" opacity="0.22"/>
+  <g stroke="#0A0A0C" stroke-width="7" fill="none" stroke-linecap="round" opacity="0.7">
+    <path d="M300 300 q-30 -50 0 -95 q30 -45 0 -90"/>
+    <path d="M450 270 q-30 -50 0 -95 q30 -45 0 -90"/>
+    <path d="M600 300 q-30 -50 0 -95 q30 -45 0 -90"/>
+  </g>
+  <path d="M170 620 Q450 1030 730 620 Z" fill="#0A0A0C"/>
+  <ellipse cx="450" cy="620" rx="280" ry="66" fill="#F2ECE1" stroke="#0A0A0C" stroke-width="10"/>
+  <ellipse cx="450" cy="622" rx="248" ry="48" fill="#F2ECE1" stroke="#0A0A0C" stroke-width="4"/>
+  <g stroke="#0A0A0C" stroke-width="7" fill="none" stroke-linecap="round">
+    <path d="M250 620 q40 -30 80 0 q40 30 80 0 q40 -30 80 0 q40 30 80 0 q40 -30 80 0"/>
+    <path d="M280 645 q40 -26 80 0 q40 26 80 0 q40 -26 80 0 q40 26 80 0"/>
+    <path d="M320 600 q40 -24 80 0 q40 24 80 0 q40 -24 80 0"/>
+  </g>
+  <circle cx="355" cy="612" r="58" fill="#F2ECE1" stroke="#0A0A0C" stroke-width="5"/>
+  <circle cx="355" cy="612" r="26" fill="#FF4A2F"/>
+  <rect x="500" y="560" width="78" height="96" rx="3" fill="#0A0A0C" transform="rotate(12 539 608)"/>
+  <path d="M515 585 H565 M515 605 H565 M515 625 H565" stroke="#F2ECE1" stroke-width="3" opacity="0.5" transform="rotate(12 539 608)"/>
+  <g transform="rotate(-18 450 520)">
+    <rect x="180" y="500" width="470" height="14" fill="#0A0A0C"/>
+    <rect x="180" y="530" width="470" height="14" fill="#0A0A0C"/>
+    <rect x="640" y="494" width="120" height="26" fill="#FF4A2F"/>
+    <rect x="640" y="524" width="120" height="26" fill="#FF4A2F"/>
+  </g>
+  <circle cx="730" cy="240" r="90" fill="#FF4A2F"/>
+  <circle cx="730" cy="240" r="90" fill="url(#p7htw)" opacity="0.15"/>
+  <text x="730" y="262" text-anchor="middle" font-family="Arial, sans-serif" font-size="58" fill="#F2ECE1">éºº</text>
+  <rect x="40" y="1030" width="820" height="110" fill="#0A0A0C"/>
+  <text x="72" y="1078" font-family="Arial Black, Arial, sans-serif" font-size="26" letter-spacing="3" fill="#F2ECE1">UN TAZON ANTES DEL FINAL</text>
+  <text x="72" y="1112" font-family="Arial, sans-serif" font-size="14" letter-spacing="4" fill="#FF4A2F">ARCHIVO KOMA / 004</text>
+  <rect x="0" y="0" width="900" height="1200" fill="none" stroke="#0A0A0C" stroke-width="10"/>
+</svg>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    background: #08080a;
+    color: #f2ece1;
+    font-family: "Inter", sans-serif;
+    display: flex;
+  }
+  .og {
+    position: relative;
+    display: flex;
+    width: 1200px;
+    height: 630px;
+    background:
+      radial-gradient(100% 90% at 78% 0%, rgba(255, 74, 47, 0.18), transparent 55%),
+      #08080a;
+    overflow: hidden;
+  }
+  .og::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(242, 236, 225, 0.1) 1px, transparent 1px);
+    background-size: 7px 7px;
+    opacity: 0.35;
+  }
+  .left {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex: 1 1 62%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 48px 0 48px 56px;
+  }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand__mark {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    background: #f2ece1;
+    color: #08080a;
+    font-family: "Anton", sans-serif;
+    font-size: 24px;
+  }
+  .brand__name { font-family: "Anton", sans-serif; font-size: 30px; letter-spacing: 0.04em; }
+  .brand__tag {
+    display: block;
+    margin-top: 2px;
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #a29b8d;
+  }
+  .title {
+    font-family: "Anton", sans-serif;
+    font-size: 88px;
+    line-height: 0.9;
+    letter-spacing: -0.015em;
+    text-transform: uppercase;
+  }
+  .title em {
+    font-family: "Instrument Serif", serif;
+    font-style: italic;
+    text-transform: none;
+    color: #ff4a2f;
+  }
+  .foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(242, 236, 225, 0.18);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #a29b8d;
+  }
+  .foot span:last-child { color: #f2ece1; }
+  .right {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex: 0 0 38%;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 48px 48px 0;
+  }
+  .right img {
+    width: 330px;
+    height: auto;
+    border: 7px solid #f2ece1;
+    box-shadow: 14px 14px 0 #ff4a2f;
+    transform: rotate(3deg);
+  }
+  .sticker {
+    position: absolute;
+    right: 34px;
+    top: 44px;
+    z-index: 3;
+    display: grid;
+    place-items: center;
+    width: 96px;
+    height: 96px;
+    border: 2px solid #08080a;
+    border-radius: 50%;
+    background: #ff4a2f;
+    color: #08080a;
+    font-family: "Anton", sans-serif;
+    font-size: 19px;
+    letter-spacing: 0.04em;
+    transform: rotate(10deg);
+  }
+  .sticker small {
+    display: block;
+    font-family: "Inter", sans-serif;
+    font-size: 7px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+  <div class="og">
+    <div class="left">
+      <div class="brand">
+        <span class="brand__mark">K</span>
+        <span>
+          <span class="brand__name">KOMA</span>
+          <span class="brand__tag">Archivo visual del manga</span>
+        </span>
+      </div>
+
+      <div>
+        <div class="title">El <em>instante</em><br>que lo cambió<br>todo.</div>
+      </div>
+
+      <div class="foot">
+        <span>12 paneles · 09 series · 58 años</span>
+        <span>Vol. 001 — 2026</span>
+      </div>
+    </div>
+
+    <div class="right">
+      <img src="../assets/img/panels/law-corazon.jpg" alt="Trafalgar Law y Corazón, de One Piece">
+      <div class="sticker">KOMA<small>週刊 · 2026</small></div>
+    </div>
+  </div>
+</body>
+</html>

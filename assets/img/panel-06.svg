@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" width="900" height="1200" role="img" aria-labelledby="p6t p6d">
+  <title id="p6t">El salto, recreacion de un panel de manga</title>
+  <desc id="p6d">Un jugador de baloncesto en el aire, a punto de machacar el aro, con lineas de movimiento y una trama de puntos.</desc>
+  <defs>
+    <pattern id="p6ht" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(20)">
+      <circle cx="2" cy="2" r="1.5" fill="#0A0A0C"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="1200" fill="#F2ECE1"/>
+  <circle cx="215" cy="300" r="270" fill="url(#p6ht)" opacity="0.35"/>
+  <line x1="40" y1="120" x2="-90" y2="760" stroke="#0A0A0C" stroke-width="3" opacity="0.35"/>
+  <line x1="62" y1="120" x2="-68" y2="760" stroke="#0A0A0C" stroke-width="3" opacity="0.35"/>
+  <line x1="84" y1="120" x2="-46" y2="760" stroke="#0A0A0C" stroke-width="3" opacity="0.35"/>
+  <line x1="106" y1="120" x2="-24" y2="760" stroke="#0A0A0C" stroke-width="3" opacity="0.35"/>
+  <line x1="128" y1="120" x2="-2" y2="760" stroke="#0A0A0C" stroke-width="3" opacity="0.35"/>
+  <line x1="150" y1="120" x2="20" y2="760" stroke="#0A0A0C" stroke-width="3" opacity="0.35"/>
+  <line x1="172" y1="120" x2="42" y2="760" stroke="#0A0A0C" stroke-width="3" opacity="0.35"/>
+  <line x1="194" y1="120" x2="64" y2="760" stroke="#0A0A0C" stroke-width="3" opacity="0.35"/>
+  <line x1="216" y1="120" x2="86" y2="760" stroke="#0A0A0C" stroke-width="3" opacity="0.35"/>
+  <line x1="238" y1="120" x2="108" y2="760" stroke="#0A0A0C" stroke-width="3" opacity="0.35"/>
+  <line x1="260" y1="120" x2="130" y2="760" stroke="#0A0A0C" stroke-width="3" opacity="0.35"/>
+  <line x1="282" y1="120" x2="152" y2="760" stroke="#0A0A0C" stroke-width="3" opacity="0.35"/>
+  <line x1="304" y1="120" x2="174" y2="760" stroke="#0A0A0C" stroke-width="3" opacity="0.35"/>
+  <line x1="326" y1="120" x2="196" y2="760" stroke="#0A0A0C" stroke-width="3" opacity="0.35"/>
+  <g>
+    <rect x="672" y="150" width="190" height="128" fill="#F2ECE1" stroke="#0A0A0C" stroke-width="8"/>
+    <rect x="712" y="192" width="110" height="56" fill="none" stroke="#0A0A0C" stroke-width="5"/>
+    <line x1="700" y1="300" x2="850" y2="300" stroke="#FF4A2F" stroke-width="12" stroke-linecap="round"/>
+    <path d="M710 302 L700 400 M750 302 L745 405 M795 302 L800 405 M840 302 L850 400" stroke="#0A0A0C" stroke-width="4"/>
+    <path d="M700 400 L745 405 L800 405 L850 400 M720 350 L745 405 M780 350 L800 405" stroke="#0A0A0C" stroke-width="4" fill="none"/>
+  </g>
+  <g stroke="#0A0A0C" stroke-width="38" stroke-linecap="round" fill="none">
+    <path d="M420 560 L420 720"/>
+    <path d="M420 590 L330 500"/>
+    <path d="M420 590 L525 455"/>
+    <path d="M420 720 L350 840 L378 950"/>
+    <path d="M420 720 L505 820 L545 930"/>
+  </g>
+  <circle cx="420" cy="500" r="44" fill="#0A0A0C"/>
+  <path d="M386 552 L454 552 L470 700 L370 700 Z" fill="#0A0A0C"/>
+  <text x="420" y="650" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="40" fill="#F2ECE1">10</text>
+  <circle cx="570" cy="405" r="52" fill="#FF4A2F" stroke="#0A0A0C" stroke-width="6"/>
+  <path d="M520 405 H620 M570 355 V455 M535 370 Q570 405 605 440 M605 370 Q570 405 535 440" stroke="#0A0A0C" stroke-width="5" fill="none"/>
+  <rect x="40" y="1030" width="820" height="110" fill="#0A0A0C"/>
+  <text x="72" y="1078" font-family="Arial Black, Arial, sans-serif" font-size="26" letter-spacing="3" fill="#F2ECE1">DIEZ SEGUNDOS</text>
+  <text x="72" y="1112" font-family="Arial, sans-serif" font-size="14" letter-spacing="4" fill="#FF4A2F">ARCHIVO KOMA / 003</text>
+  <text x="826" y="1105" text-anchor="end" font-family="Arial, sans-serif" font-size="46" fill="#F2ECE1">è·³</text>
+  <rect x="0" y="0" width="900" height="1200" fill="none" stroke="#0A0A0C" stroke-width="10"/>
+</svg>
